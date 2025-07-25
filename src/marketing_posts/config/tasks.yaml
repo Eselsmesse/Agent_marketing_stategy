@@ -32,7 +32,7 @@ campaign_idea_task:
     Develop creative marketing campaign ideas for {project_description}.
     Ensure the ideas are innovative, engaging, and aligned with the overall marketing strategy.
   expected_output: >
-    A list of 5 campaign ideas, each with a brief description and expected impact.
+    A list of 5 creative marketing campaign ideas with descriptions, target audience, and channels.
 
 copy_creation_task:
   description: >
