@@ -1,0 +1,12 @@
+# API ключи для системы маркетинговых постов
+# Скопируйте этот файл в .env и заполните своими ключами
+
+# DeepSeek API ключ (обязательно)
+DEEPSEEK_API_KEY=your_deepseek_api_key_here
+
+# Serper API ключ для веб-поиска (обязательно)
+SERPER_API_KEY=your_serper_api_key_here
+
+# Примеры получения ключей:
+# DeepSeek: https://platform.deepseek.com/
+# Serper: https://serper.dev/ 

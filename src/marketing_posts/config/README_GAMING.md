@@ -72,7 +72,7 @@ from marketing_posts.config.gaming_inputs import project_info
 ### 3. Запуск с игровыми данными
 ```python
 inputs = {
-    'customer_domain': 'puzzle-survival-bot.com',
+    'customer_domain': 'zeonbot.com',
     'project_description': project_info['product_description'],
     'target_regions': project_info['target_regions'],
     'target_languages': project_info['target_languages']

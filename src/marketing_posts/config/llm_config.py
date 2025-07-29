@@ -14,7 +14,7 @@ load_dotenv()
 class DeepSeekLLM(BaseLanguageModel):
     """Кастомная реализация DeepSeek LLM"""
     
-    model: str = Field(default="deepseek-chat")
+    model: str = Field(default="deepseek-reasoner")
     temperature: float = Field(default=1.0)
     api_key: Optional[str] = Field(default=None)
     base_url: str = Field(default="https://api.deepseek.com/v1")
@@ -142,7 +142,7 @@ class LLMConfig:
     
     @staticmethod
     def get_deepseek_llm(
-        model: str = "deepseek-chat",
+        model: str = "deepseek-reasoner",
         temperature: float = 1.0,
         api_key: Optional[str] = None
     ) -> BaseLanguageModel:
@@ -172,6 +172,6 @@ class LLMConfig:
 AVAILABLE_MODELS = {
     "deepseek": {
         "deepseek-chat": "DeepSeek Chat (DeepSeek)",
-        "deepseek-coder": "DeepSeek Coder (DeepSeek)"
+        "deepseek-reasoner": "DeepSeek Reasoner (DeepSeek)"
     }
 } 

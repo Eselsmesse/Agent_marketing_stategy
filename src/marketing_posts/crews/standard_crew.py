@@ -6,6 +6,7 @@ from typing import List
 from crewai import Agent, Task
 from marketing_posts.core.base_crew import BaseCrew
 from marketing_posts.core.config_manager import ConfigManager
+from marketing_posts.core.web_tools import web_search_tools, web_analysis_tools
 
 
 class StandardCrew(BaseCrew):
@@ -43,7 +44,13 @@ class StandardCrew(BaseCrew):
             ),
             verbose=True,
             allow_delegation=False,
-            llm=self.llm
+            llm=self.llm,
+            tools=[
+                web_search_tools.search_internet,
+                web_search_tools.analyze_market,
+                web_search_tools.search_competitors,
+                web_analysis_tools.analyze_webpage
+            ]
         )
     
     def chief_marketing_strategist(self) -> Agent:
@@ -63,7 +70,13 @@ class StandardCrew(BaseCrew):
             ),
             verbose=True,
             allow_delegation=False,
-            llm=self.llm
+            llm=self.llm,
+            tools=[
+                web_search_tools.search_marketing_strategies,
+                web_search_tools.search_trends,
+                web_search_tools.analyze_audience,
+                web_search_tools.research_product
+            ]
         )
     
     def creative_content_creator(self) -> Agent:
@@ -83,7 +96,12 @@ class StandardCrew(BaseCrew):
             ),
             verbose=True,
             allow_delegation=False,
-            llm=self.llm
+            llm=self.llm,
+            tools=[
+                web_search_tools.search_trends,
+                web_search_tools.research_product,
+                web_analysis_tools.analyze_webpage
+            ]
         )
     
     def research_task(self) -> Task:
